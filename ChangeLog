@@ -1,0 +1,80 @@
+The Rocs Changelog
+==================
+
+This changelog contains only the important changes for each release.
+For a detailed feature list please refer to the Git log.
+
+Rocs 2.0 (Applications 15.04)
+--------
+* Port to KF5/Qt5
+* Rewrite of the graph theory core
+* Major cleanups of UI
+* Removing data structure separtion and using of a more general graph document
+* Unified script API
+* Removing documentation/handbook side panel
+
+Rocs 1.8 (KDE SC 4.10)
+--------
+* Improved project support for all dialogs.
+* UI cleanup:
+  - New visual editor toolbar.
+  - New visual editor top control bar.
+  - New side panel.
+* Initial support of a side panel with
+  - journal files,
+  - documentation (currently, only handbook),
+  - and additional operations for the visual editor.
+* Parting of Rocs into RocsCore, VisualEditor and RocsApp.
+* Major work on API cleanup and API documentation.
+* Major refactoring of the properties model to simplify use.
+* Improved support for third party graph document files
+  - DOT/GraphVis support is nearly complete
+  - Trivial Graph Format files support is complete
+  - initial TikZ/PGF export of graphs
+
+Rocs 1.7 (KDE SC 4.9)
+--------
+* New data and pointer types.
+* Data Structure Plugins:
+  - New Rooted Tree Plugin
+* New project support.
+* Algorithm Execution:
+  - New debug execution mode.
+  - New stepped execution mode.
+
+Rocs 1.6.0 (KDE SC 4.8)
+--------
+* UI cleanup: script editor next to script output.
+* Visual Graph Editor: Context menus.
+* New Plugins:
+  - Generae Graphs
+  - Assign Values
+
+Rocs in KDE SC 4.7
+--------
+* Finished the Graph API.
+* Using GraphicsView for the Visual Graph Editor.
+* Ported to KDE4.
+
+Rocs in KDE SC 4.6
+--------
+* Data Structure Plugin System
+  - Graph Plugin
+  - List Plugin
+* Graph Structure Imports/Exports
+  - GraphViz
+  - GML
+  - TXT
+
+Rocs in KDE SC 4.5
+--------
+* Themeable node graphics.
+* Dialog cleanups.
+* Support for multi script files.
+* New Threading Support.
+* Plugin support in C++ and JavaScript.
+* Dynamic Properties redone.
+
+Rocs 1.0 (KDE SC 4.4)
+--------
+* Rocs joins KDE Edu.
