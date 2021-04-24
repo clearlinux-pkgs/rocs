@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : rocs
-Version  : 20.12.3
-Release  : 5
-URL      : https://download.kde.org/stable/release-service/20.12.3/src/rocs-20.12.3.tar.xz
-Source0  : https://download.kde.org/stable/release-service/20.12.3/src/rocs-20.12.3.tar.xz
-Source1  : https://download.kde.org/stable/release-service/20.12.3/src/rocs-20.12.3.tar.xz.sig
+Version  : 21.04.0
+Release  : 6
+URL      : https://download.kde.org/stable/release-service/21.04.0/src/rocs-21.04.0.tar.xz
+Source0  : https://download.kde.org/stable/release-service/21.04.0/src/rocs-21.04.0.tar.xz
+Source1  : https://download.kde.org/stable/release-service/21.04.0/src/rocs-21.04.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : EPL-1.0 GFDL-1.2 GPL-2.0 LGPL-2.1
@@ -29,9 +29,9 @@ BuildRequires : qtbase-dev
 BuildRequires : syntax-highlighting-dev
 
 %description
-# Rocs: an educational Graph Theory IDE
-<img src="https://invent.kde.org/kde/rocs/raw/master/icons/128-apps-rocs.png" align="right"
-title="Rocs logo" width="96" height="96">
+# Outline
+This readme file currently covers the following topics (further topics will be
+included in the future):
 
 %package bin
 Summary: bin components for the rocs package.
@@ -99,15 +99,15 @@ locales components for the rocs package.
 
 
 %prep
-%setup -q -n rocs-20.12.3
-cd %{_builddir}/rocs-20.12.3
+%setup -q -n rocs-21.04.0
+cd %{_builddir}/rocs-21.04.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1618705071
+export SOURCE_DATE_EPOCH=1619244648
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -123,13 +123,13 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1618705071
+export SOURCE_DATE_EPOCH=1619244648
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/rocs
-cp %{_builddir}/rocs-20.12.3/COPYING.1.GPL2 %{buildroot}/usr/share/package-licenses/rocs/0c10177c981f7c8d708265e640bd604777a5d38b
-cp %{_builddir}/rocs-20.12.3/COPYING.2.LIB.LGPL-2.1 %{buildroot}/usr/share/package-licenses/rocs/9a1929f4700d2407c70b507b3b2aaf6226a9543c
-cp %{_builddir}/rocs-20.12.3/COPYING.3.DOC %{buildroot}/usr/share/package-licenses/rocs/1bd373e4851a93027ba70064bd7dbdc6827147e1
-cp %{_builddir}/rocs-20.12.3/libgraphtheory/fileformats/dot/autotests/testfiles/COPYING.TESTDATA.EPL-1 %{buildroot}/usr/share/package-licenses/rocs/3348e5430ba4fb49fa8eb6e9caf4f06266639d0d
+cp %{_builddir}/rocs-21.04.0/COPYING.1.GPL2 %{buildroot}/usr/share/package-licenses/rocs/0c10177c981f7c8d708265e640bd604777a5d38b
+cp %{_builddir}/rocs-21.04.0/COPYING.2.LIB.LGPL-2.1 %{buildroot}/usr/share/package-licenses/rocs/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/rocs-21.04.0/COPYING.3.DOC %{buildroot}/usr/share/package-licenses/rocs/1bd373e4851a93027ba70064bd7dbdc6827147e1
+cp %{_builddir}/rocs-21.04.0/libgraphtheory/fileformats/dot/autotests/testfiles/COPYING.TESTDATA.EPL-1 %{buildroot}/usr/share/package-licenses/rocs/3348e5430ba4fb49fa8eb6e9caf4f06266639d0d
 pushd clr-build
 %make_install
 popd
@@ -193,6 +193,7 @@ popd
 /usr/share/doc/HTML/ca/rocs/index.docbook
 /usr/share/doc/HTML/de/rocs/index.cache.bz2
 /usr/share/doc/HTML/de/rocs/index.docbook
+/usr/share/doc/HTML/en/rocs/force-based-layout-ui-screenshot.png
 /usr/share/doc/HTML/en/rocs/hi22-action-rocsalignbottom.png
 /usr/share/doc/HTML/en/rocs/hi22-action-rocsaligncircle.png
 /usr/share/doc/HTML/en/rocs/hi22-action-rocsalignhmiddle.png
@@ -210,6 +211,7 @@ popd
 /usr/share/doc/HTML/en/rocs/hi22-actions-rocsselectmove.png
 /usr/share/doc/HTML/en/rocs/index.cache.bz2
 /usr/share/doc/HTML/en/rocs/index.docbook
+/usr/share/doc/HTML/en/rocs/radial-tree-layout-ui-screenshot.png
 /usr/share/doc/HTML/en/rocs/rocs-control-engine-debug.png
 /usr/share/doc/HTML/en/rocs/rocs-control-engine-step.png
 /usr/share/doc/HTML/en/rocs/rocs-interfaces.png
@@ -256,6 +258,7 @@ popd
 /usr/lib64/librocsgraphtheory.so.0
 /usr/lib64/qt5/plugins/rocs/editorplugins/assignvaluesplugin.so
 /usr/lib64/qt5/plugins/rocs/editorplugins/generategraphplugin.so
+/usr/lib64/qt5/plugins/rocs/editorplugins/graphlayoutplugin.so
 /usr/lib64/qt5/plugins/rocs/editorplugins/transformedgesplugin.so
 /usr/lib64/qt5/plugins/rocs/fileformats/dotfileformat.so
 /usr/lib64/qt5/plugins/rocs/fileformats/gmlfileformat.so
