@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : rocs
-Version  : 21.12.1
-Release  : 13
-URL      : https://download.kde.org/stable/release-service/21.12.1/src/rocs-21.12.1.tar.xz
-Source0  : https://download.kde.org/stable/release-service/21.12.1/src/rocs-21.12.1.tar.xz
-Source1  : https://download.kde.org/stable/release-service/21.12.1/src/rocs-21.12.1.tar.xz.sig
+Version  : 21.12.2
+Release  : 14
+URL      : https://download.kde.org/stable/release-service/21.12.2/src/rocs-21.12.2.tar.xz
+Source0  : https://download.kde.org/stable/release-service/21.12.2/src/rocs-21.12.2.tar.xz
+Source1  : https://download.kde.org/stable/release-service/21.12.2/src/rocs-21.12.2.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause EPL-1.0 GFDL-1.2 GPL-2.0 GPL-3.0 LGPL-2.1 LGPL-3.0
@@ -98,15 +98,15 @@ locales components for the rocs package.
 
 
 %prep
-%setup -q -n rocs-21.12.1
-cd %{_builddir}/rocs-21.12.1
+%setup -q -n rocs-21.12.2
+cd %{_builddir}/rocs-21.12.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641926144
+export SOURCE_DATE_EPOCH=1643992086
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -122,21 +122,21 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1641926144
+export SOURCE_DATE_EPOCH=1643992086
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/rocs
-cp %{_builddir}/rocs-21.12.1/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/rocs/52039e5c19c950d4c7d6ec5da42ebba2c6def7ee
-cp %{_builddir}/rocs-21.12.1/LICENSES/GFDL-1.2-or-later.txt %{buildroot}/usr/share/package-licenses/rocs/ee03d68f6be20b170e5ea5d114d6acafb3f2d1dc
-cp %{_builddir}/rocs-21.12.1/LICENSES/GPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/rocs/3e8971c6c5f16674958913a94a36b1ea7a00ac46
-cp %{_builddir}/rocs-21.12.1/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/rocs/3e8971c6c5f16674958913a94a36b1ea7a00ac46
-cp %{_builddir}/rocs-21.12.1/LICENSES/GPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/rocs/2123756e0b1fc8243547235a33c0fcabfe3b9a51
-cp %{_builddir}/rocs-21.12.1/LICENSES/LGPL-2.1-only.txt %{buildroot}/usr/share/package-licenses/rocs/81b58c89ceef8e9f8bd5d00a287edbd15f9d3567
-cp %{_builddir}/rocs-21.12.1/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/rocs/19d98e1b6f8ef12849ea4012a052d3907f336c91
-cp %{_builddir}/rocs-21.12.1/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/rocs/7d9831e05094ce723947d729c2a46a09d6e90275
-cp %{_builddir}/rocs-21.12.1/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/rocs/7d9831e05094ce723947d729c2a46a09d6e90275
-cp %{_builddir}/rocs-21.12.1/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/rocs/e458941548e0864907e654fa2e192844ae90fc32
-cp %{_builddir}/rocs-21.12.1/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/rocs/e458941548e0864907e654fa2e192844ae90fc32
-cp %{_builddir}/rocs-21.12.1/libgraphtheory/fileformats/dot/autotests/testfiles/COPYING.TESTDATA.EPL-1 %{buildroot}/usr/share/package-licenses/rocs/3348e5430ba4fb49fa8eb6e9caf4f06266639d0d
+cp %{_builddir}/rocs-21.12.2/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/rocs/52039e5c19c950d4c7d6ec5da42ebba2c6def7ee
+cp %{_builddir}/rocs-21.12.2/LICENSES/GFDL-1.2-or-later.txt %{buildroot}/usr/share/package-licenses/rocs/ee03d68f6be20b170e5ea5d114d6acafb3f2d1dc
+cp %{_builddir}/rocs-21.12.2/LICENSES/GPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/rocs/3e8971c6c5f16674958913a94a36b1ea7a00ac46
+cp %{_builddir}/rocs-21.12.2/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/rocs/3e8971c6c5f16674958913a94a36b1ea7a00ac46
+cp %{_builddir}/rocs-21.12.2/LICENSES/GPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/rocs/2123756e0b1fc8243547235a33c0fcabfe3b9a51
+cp %{_builddir}/rocs-21.12.2/LICENSES/LGPL-2.1-only.txt %{buildroot}/usr/share/package-licenses/rocs/81b58c89ceef8e9f8bd5d00a287edbd15f9d3567
+cp %{_builddir}/rocs-21.12.2/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/rocs/19d98e1b6f8ef12849ea4012a052d3907f336c91
+cp %{_builddir}/rocs-21.12.2/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/rocs/7d9831e05094ce723947d729c2a46a09d6e90275
+cp %{_builddir}/rocs-21.12.2/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/rocs/7d9831e05094ce723947d729c2a46a09d6e90275
+cp %{_builddir}/rocs-21.12.2/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/rocs/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/rocs-21.12.2/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/rocs/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/rocs-21.12.2/libgraphtheory/fileformats/dot/autotests/testfiles/COPYING.TESTDATA.EPL-1 %{buildroot}/usr/share/package-licenses/rocs/3348e5430ba4fb49fa8eb6e9caf4f06266639d0d
 pushd clr-build
 %make_install
 popd
