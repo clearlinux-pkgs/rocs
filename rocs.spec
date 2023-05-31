@@ -7,7 +7,7 @@
 #
 Name     : rocs
 Version  : 23.04.1
-Release  : 30
+Release  : 31
 URL      : https://download.kde.org/stable/release-service/23.04.1/src/rocs-23.04.1.tar.xz
 Source0  : https://download.kde.org/stable/release-service/23.04.1/src/rocs-23.04.1.tar.xz
 Source1  : https://download.kde.org/stable/release-service/23.04.1/src/rocs-23.04.1.tar.xz.sig
@@ -110,7 +110,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684792189
+export SOURCE_DATE_EPOCH=1685509400
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -143,7 +143,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1684792189
+export SOURCE_DATE_EPOCH=1685509400
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/rocs
 cp %{_builddir}/rocs-%{version}/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/rocs/52039e5c19c950d4c7d6ec5da42ebba2c6def7ee || :
@@ -215,7 +215,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/librocsgraphtheory.so
 /usr/include/rocs/edge.h
 /usr/include/rocs/graphdocument.h
 /usr/include/rocs/node.h
